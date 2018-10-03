@@ -1,8 +1,5 @@
 # blok-web
-FrontEndDevelopment verhalenwebsite https://github.com/Danielledkhva/blok-web
-blok-web/index.html
-blok-web/inloggen.html
-blok-web/style.css
+FrontEndDevelopment verhalenwebsite
 
 index.html bevat al de html code voor de overzichtspagina.
 inloggen.html bevat de html code voor het inloggen op de overzichtspagina van de verhalen.
