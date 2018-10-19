@@ -362,14 +362,14 @@ footer button:hover {
 }
 
 .show {
-    background-color: white;
-    box-shadow: none;
-    border: 0;
-    background-image: url(images/vink.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 3em;
-    height: 3em;
+    background-color: pink;
+    xbox-shadow: none;
+    xborder: 0;
+    xbackground-image: url(images/vink.png);
+    xbackground-size: contain;
+    xbackground-repeat: no-repeat;
+    xwidth: 3em;
+    xheight: 3em;
 }
 
 article {
