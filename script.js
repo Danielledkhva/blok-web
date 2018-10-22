@@ -10,6 +10,12 @@ checkbutton.addEventListener('click', function() {
 
 })
 
+var comment = document.querySelector('form > fieldset');
+    //console.log("submit?", comment);
+
+comment.addEventListener('click', function() {
+  comment.classList.add("down");
+})
 
 
 
