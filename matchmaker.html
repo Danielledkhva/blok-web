@@ -14,7 +14,7 @@
                 <li><a href="https://www.ns.nl/"><img src="images/nskopie.png" alt="NS logo"></a></li>
                 <li><a href="index.html">Alle verhalen</a></li>
                 <li><a href="">Mijn reis</a></li>
-                <li><a href="mijnverhalenleeg.html">Mijn verhalen</a></li>
+                <li><a href="mijnverhalen.html">Mijn verhalen</a></li>
                 <li><a href=""><img src="images/zoekkopie.png" alt="zoek knop"></a></li>
             </ul>
         </nav>
@@ -26,13 +26,14 @@
         </form>
     </header>
     <main>
-        <form action="match.html">
+        <form action="match.html" class="matchmaker">
             <fieldset>
                 <legend>Story matchmaker</legend>
                 <p>Om een match te maken is het belangrijk dat je sfeerwoorden kiest die bij je passen. Om zo een verhaal te vinden die jij leuk vind.</p>
                 <button>Gefrustreerd (6)</button>
                 <button>Alzheimer (5)</button>
-                <button formaction="matchmaker.html">Verliefd (5)</button>
+                <button id="loved">Verliefd (5)</button>
+                <button id="love" formaction="index.html">x Verliefd (5)</button>
                 <button>Droom (5)</button>
                 <button>Paranoia (10)</button>
                 <button>Sportcommentaar (3)</button>
@@ -40,7 +41,7 @@
                 <button>Stoned (3)</button>
                 <button>Western (3)</button> <br>
                 <input type="text"> <br>
-                <input type="submit" value="Match!"> <br>
+                <input type="submit" formaction="matchresultaten.html" value="Match!"> <br>
             </fieldset>
         </form>
         <section>

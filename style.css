@@ -15,7 +15,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-
 }
 
 #loginpage {
@@ -41,6 +40,29 @@ body {
 #login > p {
     margin: 1em 1.5em;
     max-width: 30em;
+}
+
+.matchmaker {
+    position: relative;
+}
+
+#loved {
+    background-color: #e6e6e9;
+    color: #686979;
+    border: .125em;
+    border-style: dashed;
+    border-color: #686979;
+}
+
+#love {
+    background-color: #0079d3;
+    position: absolute;
+    bottom: 13em;
+    left: 5em;
+}
+
+#emptystate p {
+    color: #686979;
 }
 
 #matchresults section {
@@ -265,6 +287,17 @@ form button {
     border-radius: 0em;
     margin: .5em 0;
 }
+
+/*
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+button a::after {
+    content: ' ';
+}
+*/
 
 input[type=text] {
     border: 0em;
@@ -683,6 +716,7 @@ footer li a:hover::before {
         grid-column: 1/4;
 /*        margin: 0;*/
     }
+
 /*
     #mystories section {
         grid-column: 2/4;
