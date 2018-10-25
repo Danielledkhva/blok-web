@@ -288,17 +288,6 @@ form button {
     margin: .5em 0;
 }
 
-/*
-button > a {
-    color: white;
-    text-decoration: none;
-}
-
-button a::after {
-    content: ' ';
-}
-*/
-
 input[type=text] {
     border: 0em;
     border-radius: 0em;
