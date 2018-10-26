@@ -1,35 +1,28 @@
+/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 
-//declareren van vars en elementen in de dom
-var article = document.querySelector('section > article');
-var checkbutton = document.querySelector('article > footer > button');
-//console.log("button? ",checkbutton);
+/*eslint-env browser*/
 
-checkbutton.addEventListener('click', function() {
-    //console.log("we hebben een klik dames en heren");
-    checkbutton.classList.toggle("show");
+/*eslint 'no-console': 0*/
 
-})
+//plusje laten veranderen in een vinkje
+//var article = document.querySelector('section > article');
+var checkbutton = document.querySelectorAll('article > footer > button');
 
-var comment = document.querySelector('form > fieldset');
-    //console.log("submit?", comment);
+for(var i = 0; i < checkbutton.length; i++){
+    checkbutton[i].addEventListener('click', function() {
+    this.classList.toggle("show");
+});
+}
 
-comment.addEventListener('click', function() {
+
+
+//comment laten verschijnen
+document.getElementById('trigger').addEventListener('click', function(e) {
+    e.preventDefault();
   comment.classList.add("down");
-})
+});
+var comment = document.querySelector('section > article');
 
 
 
-/*
 
-
-check.addEventListener('click', function() {
-                       article.classList.add('show');
-                       })
-
-var header = document.querySelector('body > header');
-var form = document.querySelector('li > img');
-
-form.addEventListener('click', function() {
-    form.classList.add('down');
-})
-*/
