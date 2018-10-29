@@ -85,7 +85,7 @@ body {
 }
 
 #mystories section {
-    grid-column: 2/3;
+    Xgrid-column: 2/3; /* geen column definieren dan blijven de articles mooi in het midden */
 }
 
 #mystories h1 {
@@ -98,11 +98,8 @@ body {
     width: 100%;
     padding: 1em;
     margin: 1em auto;
-/*
-    min-width: 60%;
-    max-width: 80%;
-*/
 }
+
 .story .image2, .story .image3 {
     display: none;
 }
@@ -152,45 +149,37 @@ body {
 }
 
 #first {
+/*
     position: absolute;
     top: -666em;
-    transition: all .5s ease-out;
-/*    animation: article;*/
+*/
+    display: none;
+    background-color: white;
+    transition: all 5s ease-out;
 }
 
 #storypage .down {
-    top: 0;
+/*    top: 0;*/
+    display: flex;
+/*    transition: all .5s ease-out;*/
+    background-color: rgba(255, 201, 23, 0.75);
 }
 
-/*
-@keyframes article {
-    from {
-        top: -666em;
-        display: none;
-    }
-
-    to {
-        top: 0;
-        display: block;
-    }
-}
-*/
-
-#storypage > section > article > img:nth-of-type(1) {
+#storypage article > img:nth-of-type(1) {
     width: 2em;
     position: absolute;
     left: 10%;
     top: 10%;
-}
+}    /*Om de profielfoto een grootte te geven*/
 
-#storypage > section > article > img:nth-of-type(2) {
+#storypage article > img:nth-of-type(2) {
     width: 1em;
     position: absolute;
     right: 10%;
     bottom: 10%;
-}
+} /*Om de reactie button een grootte te geven*/
 
-#storypage > section > article > h2 {
+#storypage h2 {
     position: absolute;
     padding: 0;
     margin: 0;
@@ -198,14 +187,10 @@ body {
     left: 25%;
 }
 
-#storypage > section > article > p {
+#storypage p {
     position: absolute;
     top: 35%;
     left: 10%;
-}
-
-header {
-    position: relative;
 }
 
 header ul {
@@ -220,50 +205,16 @@ header li {
     text-align: center;
     padding: 1em 1em;
     text-decoration: none;
-    max-width: 40em;
     flex-direction: row;
     justify-content: space-around;
 }
 
 li {
-    padding: 0.5em;
-}
-
-li a {
-    text-decoration: none;
-}
+    padding: .5em .5em;
+} /*Om de footer linkjes ruimte te geven*/
 
 li img {
     max-width: 1.5em;
-}
-
-header form {
-    position: absolute;
-    max-width: 10em;
-    background-color: #686979;
-    border: 0;
-    box-shadow: none;
-    width: 10em;
-    height: 2em;
-    padding: 0;
-    right: 0;
-    top: -666em;
-}
-
-header fieldset {
-    width: 10em;
-    height: 2em;
-    padding: 0;
-}
-
-header input[type=text] {
-    width: 13em;
-    height: 2em;
-    margin: .5em .5em;
-}
-
-.down {
-    top: 0;
 }
 
 h1 {
@@ -306,7 +257,6 @@ legend {
     font-size: 2.375em;
     font-weight: 400;
     color: #003082;
-    padding: 0;
 }
 
 fieldset a {
@@ -316,6 +266,10 @@ fieldset a {
 
 fieldset a::after {
     content: " >"
+}
+
+fieldset a:link {
+    color: #003082;
 }
 
 label {
@@ -340,13 +294,17 @@ input[type=text] {
     margin: 1em 0em;
 }
 
+input[type=text]:hover {
+    box-shadow: .125em .125em #686979;
+}
+
 input[type=text]:active {
     background-color: #686979;
 }
 
 input[type=text]:focus {
     border: .2em solid #cfa317;
-    background-color: #e6e6e9;
+    background-color: #686979;
 }
 
 input[type=email] {
@@ -356,17 +314,21 @@ input[type=email] {
     margin-bottom: 1em;
 }
 
+input[type=email]:hover {
+    box-shadow: .125em .125em #686979;
+}
+
 input[type=email]:active {
     background-color: #686979;
 }
 
 input[type=email]:focus {
     border: .2em solid #cfa317;
-    background-color: #e6e6e9;
+    background-color: #686979;
 }
 
 input[type=email]:valid:focus {
-    background-color: lightgreen;
+    background-color: green;
 }
 
 input[type=email]:invalid:focus {
@@ -380,17 +342,21 @@ input[type=password] {
     margin-bottom: 1em;
 }
 
+input[type=password]:hover {
+    box-shadow: .125em .125em #686979;
+}
+
 input[type=password]:active {
     background-color: #686979;
 }
 
 input[type=password]:focus {
     border: .2em solid #cfa317;
-    background-color: #e6e6e9;
+    background-color: #686979;
 }
 
 input[type=password]:valid:focus {
-    background-color: lightgreen;
+    background-color: green;
 }
 
 input[type=password]:invalid:focus {
@@ -422,7 +388,7 @@ article {
     padding: 1em;
     margin: 1em 0;
     min-width: 5em;
-    max-width: 20em;
+    max-width: 22em;
     box-shadow: inset 0 -.125em 0 0 rgba(7, 7, 33, .15);
     color: #000;
     display: flex;
@@ -448,7 +414,6 @@ p > span {
 
 p img {
     width: 2em;
-    height: auto;
 }
 
 a {
@@ -488,12 +453,10 @@ footer button {
     background-size: contain;
     background-repeat: no-repeat;
     min-width: 3em;
-    max-width: 3em;
-    width: 2em;
     height: 2em;
     position: absolute;
     right: 0;
-    transition: all .5s ease-out;
+    transition: all .25s ease-out;
 }
 
 footer button:hover {
@@ -555,11 +518,13 @@ footer li a:hover::before {
         grid-gap: 1em;
         width: 100%;
     }
+
     #login {
         min-width: 45%;
         max-width: 65%;
         margin: 1em auto;
     }
+
     #loginpage > footer {
         position: absolute;
         width: 100%;
@@ -570,17 +535,21 @@ footer li a:hover::before {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .story {
         padding: 1em;
         margin: 2em auto;
         grid-column: 1/4;
     }
+
     .story .image1, .story .image3 {
         display: none;
     }
+
     .story .image2 {
         display: block;
     }
+
     #storypage > section {
         margin: 1em auto;
         padding: 0;
@@ -588,89 +557,78 @@ footer li a:hover::before {
 
     #storypage > section > article {
         position: relative;
-        min-width: 45%;
-        max-width: 100% margin: 0;
+        max-width: 22em;
+        margin: 0;
         padding: 0;
-        grid-column: 1/3;
-        /*        width: 100%;*/
+        grid-column: 2/3;
     }
 
     #storypage > form {
         grid-column: 2/3;
         width: 22em;
     }
+
     #loginpage {
         display: block;
     }
+
     #mystories article{
         min-width: 15em;
     }
-/*
-    #mystories h1 {
-        grid-column: 1/4;
-        margin: 0;
-    }
 
-    #mystories {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column: 1/4;
-        grid-gap: 1em;
-        width: 100%;
-    }
-
-    #mystories section {
-        grid-column: 2/4;
-    }
-    #mystories > section > article {
-        grid-column: 1/2;
-        width: 100%;
-    }
-*/
     main {
         grid-column: 1/3;
         max-width: 45em;
         margin: 0 auto;
-
     }
+
     header {
         grid-column: 1/4;
     }
+
     header ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     form {
         grid-column: 1/3;
         padding: 0;
         border: 0;
-        margin: 0 auto;
+        margin: 0 2em; /* om te voorkomen dat de form tegen de rand gaat staan */
     }
+
     form legend {
         padding: .5em 0em 0em 0em;
     }
+
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
         grid-column: 1/3;
-        padding: 0;
+        padding: 2em; /* padding zodat de articles niet tegen de rand gaan staan */
     }
+
     section h2 {
         grid-column: 1/3;
     }
+
     article {
         width: 100%;
     }
+
     section button {
         grid-column: 1/2;
         max-width: 7.5em;
         margin-left: 0;
     }
+
     footer {
         grid-column: 1/4;
     }
+
     footer ul {
         display: flex;
         flex-direction: row;
@@ -685,6 +643,7 @@ footer li a:hover::before {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1em;
     }
+
     main {
         max-width: 53em;
         margin: 0 auto;
@@ -695,11 +654,13 @@ footer li a:hover::before {
     #loginpage {
         display: block;
     }
+
     #login {
         min-width: 45%;
         max-width: 65%;
         margin: 1em auto;
     }
+
     #loginpage > footer {
         position: absolute;
         width: 100%;
@@ -713,66 +674,43 @@ footer li a:hover::before {
     }
 
     section.story {
-        grid-column: 2/3;
-    }
-    .story {
+/*        grid-column: 2/3;*/
+        width: 100%;
         padding: 1em;
         margin: 2em auto;
     }
+
         .story .image1, .story .image2 {
         display: none;
     }
+
     .story .image3 {
         display: block;
+/*        width: 100%;*/
     }
+
     #storypage > form {
         grid-column: 2/3;
+        margin: 0;
+
     }
+
     #storypage > section {
-        margin: 0 auto;
+        display: block;
+        grid-column: 2/3;
+/*        margin: 0 auto;*/
         padding: 0;
     }
 
     #storypage > section > article {
-        grid-column: 2/3;
-        margin: 0;
+        max-width: 22em;
+        margin: 1em 0;
         padding: 0;
     }
 
-/*
-    #mystories {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column: 1/5;
-        grid-gap: 1em;
-        width: 100%;
-    }
-
-    #mystories header {
-        grid-column: 1/5;
-    }
-*/
-
     #mystories h1 {
         grid-column: 1/4;
-/*        margin: 0;*/
     }
-
-/*
-    #mystories section {
-        grid-column: 2/4;
-    }
-*/
-/*
-    #mystories > section > article {
-        grid-column: 1/2;
-        width: 100%;
-    }
-
-    #mystories footer {
-        grid-column: 1/5;
-    }
-*/
 
     #matchresults h1 {
         grid-column: 1/4;
@@ -781,19 +719,24 @@ footer li a:hover::before {
     header {
         grid-column: 1/4;
     }
+
     header ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     form {
         grid-column: 2/5;
         padding: 0;
         border: 0;
+        margin: 0;
     }
+
     form legend {
         padding: .5em 0em 0em 0em;
     }
+
     section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -801,6 +744,7 @@ footer li a:hover::before {
         grid-column: 2/3;
         padding: 0;
     }
+
     section h2 {
         grid-column: 1/4;
     }
@@ -816,14 +760,17 @@ footer li a:hover::before {
         justify-content: space-between;
         width: 100%;
     }
+
     section button {
         grid-column: 1/2;
         max-width: 7.5em;
         margin-left: 0;
     }
+
     footer {
         grid-column: 1/4;
     }
+
     footer ul {
         display: flex;
         flex-direction: row;
