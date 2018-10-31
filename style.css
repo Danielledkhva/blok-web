@@ -31,7 +31,7 @@ body {
 #login > fieldset {
     margin: .5em 1.5em;
     padding: 0;
-    min-width: ;
+    min-width: 19em;
 }
 
 #login > legend {
@@ -296,22 +296,22 @@ form button {
     background-color: #003082;
     color: white;
     padding: 1em;
-    border: 0em;
-    border-radius: 0em;
+    border: 0;
+    border-radius: 0;
     margin: .5em 0;
 }
 
 input[type=text] {
-    border: 0em;
-    border-radius: 0em;
+    border: 0;
+    border-radius: 0;
     box-sizing: border-box;
     width: 100%;
     height: 10em;
-    margin: 1em 0em;
+    margin: 1em 0;
 }
 
 input[type=email], input[type=password] {
-    border: 0em;
+    border: 0;
     font-size: 1em;
     padding: .5em;
     margin-bottom: 1em;
@@ -578,7 +578,7 @@ footer li a:hover::before {
     }
 
     form legend {
-        padding: .5em 0em 0em 0em;
+        padding: .5em 0 0 0;
     }
 
     section {
@@ -693,7 +693,7 @@ footer li a:hover::before {
     }
 
     form legend {
-        padding: .5em 0em 0em 0em;
+        padding: .5em 0 0 0;
     }
 
     section {
